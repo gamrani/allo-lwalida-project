@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="getstart" padding>
     <div text-center><h3>Bienvenu !</h3></div>
   Vous êtes étudiant vivant loin de sa famille ? 
   Vous êtes en période d’examens, et vous n’avez pas assez de temps pour préparer votre Ftour ? <br>
@@ -15,4 +15,13 @@
       <ion-img src="assets/imgs/Allo.png"></ion-img>  
    </div>
    <div text-center> Choose <span id="allo">Allo</span> <span id="lwalida">L’walida</span> when you miss Chhiwates l’walida !</div>
+ <ion-card>
+    <ion-card-header>
+      Contactez-nous
+    </ion-card-header>
+    <ion-card-content>
+       <button ion-button color="light" (click)="call()"> <ion-icon name="call"></ion-icon> &nbsp; +212 681-674468 </button> <br>
+       <button ion-button color="light" (click)="email()"> <ion-icon name="mail"></ion-icon> &nbsp; alloLwalida@gmail.com </button>  
+    </ion-card-content>
+  </ion-card>
 </ion-content>

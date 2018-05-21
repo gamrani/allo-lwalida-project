@@ -9,31 +9,53 @@ import {ReservationPage} from '../reservation/reservation';
 })
 export class ContactPage {
   value=0;
-  pizza: boolean;
-  panini: boolean;
+  basique: boolean;
+  moyen: boolean;
+  allo: boolean;
+  pack="";
 
   constructor(public navCtrl: NavController) {
 
   }
   
-  pizzaPrice(){
-    if(this.pizza)  {this.value = this.value +40;}
-    if(!this.pizza && this.value>0) {
-      this.value=this.value-40;
+  basiquePrice(){
+    if(this.basique)  {this.value = this.value +28;}
+    if(!this.basique && this.value>0) {
+      this.value=this.value-28;
     }
   
   }
-  paniniPrice(){
-    if(this.panini)  {this.value = this.value +50;}
-    if(!this.panini && this.value>0) {
-      this.value=this.value-50;
+  
+  moyenPrice(){
+    if(this.moyen)  {this.value = this.value +37;}
+    if(!this.moyen && this.value>0) {
+      this.value=this.value-37;
+    } 
+  }
+  alloPrice(){
+    if(this.allo)  {this.value = this.value +45;}
+    if(!this.allo && this.value>0) {
+      this.value=this.value-45;
     } 
   }
   reserver(){
-    if(confirm("Le prix total de votre choix est :  "+this.value)) {
+    if(this.basique){
+      this.pack=this.pack+" "+" Ftour basique";
+    }
+    if(this.moyen){
+      this.pack=this.pack+" + "+" Ftour moyen";
+    }
+    if(this.allo){
+      this.pack = this.pack +" + "+"Ftour allo l'walida";
+    }
+    
+    
+    if(confirm("Le pack choisit est :  "+this.pack+"  ")) {
         this.navCtrl.push(ReservationPage,{
           param1 : this.value
         });      
+    }else{
+      this.pack = "";
     }
   }
 }
