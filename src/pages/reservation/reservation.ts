@@ -14,12 +14,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'reservation.html',
 })
 export class ReservationPage {
-
+  res = {};
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ReservationPage');
+  reservation(){
+    this.navCtrl.pop();
   }
 
 }

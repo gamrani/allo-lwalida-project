@@ -14,5 +14,13 @@
 
 
 <ion-content padding>
-{{value}}
+  <form (ngSubmit)="reservation()">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="res.nom" name="nom" placeholder="nom" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="res.prenom" name="prenom" placeholder="prenom"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Terminer</button>
+  </form>
 </ion-content>
