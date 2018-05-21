@@ -31,7 +31,9 @@ export class ContactPage {
   }
   reserver(){
     if(confirm("Le prix total de votre choix est :  "+this.value)) {
-        this.navCtrl.push(ReservationPage);      
+        this.navCtrl.push(ReservationPage,{
+          param1 : this.value
+        });      
     }
   }
 }

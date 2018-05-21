@@ -14,13 +14,23 @@
 
 
 <ion-content padding>
+  <h2>prix : {{value}}</h2> 
   <form (ngSubmit)="reservation()">
     <ion-item>
-      <ion-input type="text" [(ngModel)]="res.nom" name="nom" placeholder="nom" ></ion-input>
+      <ion-input type="text" [(ngModel)]="res.nom" value="0" name="nom" placeholder="nom" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="text" [(ngModel)]="res.prenom" name="prenom" placeholder="prenom"></ion-input>
+      <ion-input type="text" [(ngModel)]="res.prenom" name="prenom" placeholder="prenom" required></ion-input>
     </ion-item>
-    <button ion-button type="submit" block>Terminer</button>
+    <ion-item>
+        <ion-input type="textarea" [(ngModel)]="res.adresse" name="adresse" placeholder="adresse" required></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input type="tel" [(ngModel)]="res.tele" name="tele" placeholder="numéro de téléphone" required></ion-input>
+    </ion-item>
+
+    <ion-checkbox color="dark"  required></ion-checkbox> La livraison est disponible que dans la zone de Kénitra
+    
+    <button ion-button type="submit" [disabled]="verify()" block>CONFIRMER LA DEMANDE</button>
   </form>
 </ion-content>
