@@ -15,22 +15,22 @@
 
 <ion-content padding>
   <h2>prix : {{value}}</h2> 
-  <form (ngSubmit)="reservation()">
+  <form (ngSubmit)="reserver(res)">
     <ion-item>
-      <ion-input type="text" [(ngModel)]="res.nom" value="0" name="nom" placeholder="nom" required></ion-input>
+      <ion-input type="text" [(ngModel)]="res.fname" value="0" name="fname" placeholder="nom" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="text" [(ngModel)]="res.prenom" name="prenom" placeholder="prenom" required></ion-input>
+      <ion-input type="text" [(ngModel)]="res.lname" name="lname" placeholder="prename" required></ion-input>
     </ion-item>
     <ion-item>
-        <ion-input type="textarea" [(ngModel)]="res.adresse" name="adresse" placeholder="adresse" required></ion-input>
+        <ion-input type="textarea" [(ngModel)]="res.adress" name="adress" placeholder="adresse" required></ion-input>
     </ion-item>
     <ion-item>
-        <ion-input type="tel" [(ngModel)]="res.tele" name="tele" placeholder="numéro de téléphone" required></ion-input>
+        <ion-input type="tel" [(ngModel)]="res.phone" name="phone" placeholder="xx xx xx xx xx" required></ion-input>
     </ion-item>
       <br>   <br>
     <ion-checkbox color="dark"  required></ion-checkbox> La livraison est disponible que dans la zone de Kénitra
     <br><br>
-    <button ion-button type="submit" [disabled]="verify()" block>CONFIRMER LA DEMANDE</button>
+    <button ion-button type="submit" [disabled]="verify()"  block>CONFIRMER LA DEMANDE</button>
   </form>
 </ion-content>

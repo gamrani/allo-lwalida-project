@@ -12,6 +12,23 @@ import { ReservationPage } from '../pages/reservation/reservation';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { HttpModule } from '@angular/http';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+//import { FirebaseProvider } from './../providers/firebase/firebase';
+
+import { ReservationProvider } from '../providers/reservation/reservation';
+import { EmailComposer } from '@ionic-native/email-composer';
+
+const config = {
+  apiKey: "AIzaSyDcxKIFUqJrdN4ca_TngnbmBPcb4EcGgUc",
+  authDomain: "allolwalida-3d358.firebaseapp.com",
+  databaseURL: "https://allolwalida-3d358.firebaseio.com",
+  storageBucket: "allolwalida-3d358.appspot.com",
+  messagingSenderId: "390097798655"
+};
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -23,7 +40,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(config),
+    HttpModule,
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,7 +57,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    EmailComposer,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ReservationProvider
   ]
 })
 export class AppModule {}
