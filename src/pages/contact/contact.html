@@ -7,11 +7,18 @@
 </ion-header>
 
 <ion-content>
-  <div text-center>
-      Les repas proposés: ( <span id="ramadan">spécial ramadan</span> )
-      choisissez votre pack Ftour:
-    </div>  
-  <ion-card>
+  <ion-card id="c">
+     
+    <ion-card-content>
+          <div text-center>
+            <h4>Les repas proposés:  <span id="ramadan">( spécial ramadan )</span> 
+              choisissez votre pack Ftour: 
+            </h4>  <br>
+              <ion-icon name="restaurant"></ion-icon>
+            </div>       
+      </ion-card-content>
+  </ion-card> 
+  <ion-card id="basique">
     <ion-card-content>
       <ion-card-title>
           Ftour basique
@@ -21,29 +28,28 @@
       </p><br>
       <div><ion-icon name="pricetag"></ion-icon> Prix : 28 DHs </div>
   
-      <ion-item>
-        <ion-label>Ajouter dans ma panel</ion-label>
-        <ion-checkbox color="dark" [(ngModel)]="basique" (ionChange)="basiquePrice()"></ion-checkbox>
-      </ion-item>
+        Ajouter dans ma panel  <ion-checkbox color="dark" [(ngModel)]="basique" (ionChange)="basiquePrice()"></ion-checkbox>
+    
     </ion-card-content>
   </ion-card>
-  <ion-card>
+  <ion-card id="moyen">
     <ion-card-content>
       <ion-card-title>
         Ftour moyen
         </ion-card-title>
       <p>
        Hrira, dates, chebbakia, œuf dur, jus d'orange,Beghrir, Msemen, 3 pièces salés. 
-      </p><br>
+      </p>
+      <br>
       <div><ion-icon name="pricetag"></ion-icon> Prix : 37 Dhs </div>
   
-      <ion-item>
-        <ion-label>Ajouter dans ma panel</ion-label>
-        <ion-checkbox color="dark" [(ngModel)]="moyen" (ionChange)="moyenPrice()"></ion-checkbox>
-      </ion-item>
+     
+        
+      Ajouter dans ma panel <ion-checkbox color="dark" [(ngModel)]="moyen" (ionChange)="moyenPrice()"></ion-checkbox>
+      
     </ion-card-content>
   </ion-card>
-  <ion-card>
+  <ion-card id="alloCard">
      <ion-card-content>
        <ion-card-title>
          Ftour Allo L'walida
@@ -52,10 +58,9 @@
               Hrira, dates, chebbakia, œuf dur, jus d'orange,Beghrir, Msemen, fromage, 5 pièces salés.            </p><br>
             <div><ion-icon name="pricetag"></ion-icon> Prix : 45 Dhs </div>
         
-            <ion-item>
-              <ion-label>Ajouter dans ma panel</ion-label>
-              <ion-checkbox color="dark" [(ngModel)]="allo" (ionChange)="alloPrice()"></ion-checkbox>
-            </ion-item>
+            
+              Ajouter dans ma panel <ion-checkbox color="dark" [(ngModel)]="allo" (ionChange)="alloPrice()"></ion-checkbox>
+            
      </ion-card-content>
    </ion-card>
    <ion-card>

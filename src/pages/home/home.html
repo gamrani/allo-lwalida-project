@@ -12,7 +12,7 @@
   vous pouvez chaque jour avant 12h faire votre commande Via notre application, 
   des packs succulents vous attendent, n’hésitez pas à nous contacter ! <br> <br>
   <div text-center>
-      <ion-img src="assets/imgs/Allo.png"></ion-img>  
+      <ion-img src="./assets/imgs/Allo.png"></ion-img>  
    </div>
    <div text-center> Choose <span id="allo">Allo</span> <span id="lwalida">L’walida</span> when you miss Chhiwates l’walida !</div>
  <ion-card>
@@ -20,8 +20,9 @@
       Contactez-nous
     </ion-card-header>
     <ion-card-content>
-       <button ion-button color="light" (click)="call()"> <ion-icon name="call"></ion-icon> &nbsp; +212 681-674468 </button> <br>
-       <button ion-button color="light" (click)="email()"> <ion-icon name="mail"></ion-icon> &nbsp; alloLwalida@gmail.com </button>  
+        <a href="tel:+212681674468"><ion-icon name="call"></ion-icon> &nbsp; +212 681-674468 </a> <br>
+        <a href="mailto:alloLwalida@gmail.com"><ion-icon name="mail"></ion-icon> &nbsp; alloLwalida@gmail.com </a>
+  
     </ion-card-content>
   </ion-card>
 </ion-content>
