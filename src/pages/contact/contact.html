@@ -1,13 +1,57 @@
-<ion-card>
-  <img src="assets/imgs/logo.png"/>
-  <ion-card-content>
-    <ion-card-title>
-      Nine Inch Nails Live
-      </ion-card-title>
-    <p>
-      The most popular industrial group ever, and largely
-      responsible for bringing the music to a mass audience.
-    </p><br>
-    <div><ion-icon name="pricetag"></ion-icon> Prix : 50 MAD </div>
-  </ion-card-content>
-</ion-card>
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    [IMAGE]
+    <ion-card-content>
+      <ion-card-title>
+        PANINI
+        </ion-card-title>
+      <p>
+        The most popular industrial group ever, and largely
+        responsible for bringing the music to a mass audience.
+      </p><br>
+      <div><ion-icon name="pricetag"></ion-icon> Prix : 50 MAD </div>
+  
+      <ion-item>
+        <ion-label>Ajouter dans ma panel</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="panini" (ionChange)="paniniPrice()"></ion-checkbox>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    [IMAGE]
+    <ion-card-content>
+      <ion-card-title>
+        pizza
+        </ion-card-title>
+      <p>
+        The most popular industrial group ever, and largely
+        responsible for bringing the music to a mass audience.
+      </p><br>
+      <div><ion-icon name="pricetag"></ion-icon> Prix : 40 MAD </div>
+  
+      <ion-item>
+        <ion-label>Ajouter dans ma panel</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="pizza" (ionChange)="pizzaPrice()"></ion-checkbox>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      
+      <div><ion-card-title>
+        TOTAL :
+        </ion-card-title><ion-icon name="pricetag"></ion-icon> Prix : {{value}} MAD </div>
+      <button ion-button color="secondary" [disabled]="!pizza && !panini" (click)="reserver()">Reserver</button>
+  
+  
+    </ion-card-content>
+  </ion-card>
+</ion-content>
