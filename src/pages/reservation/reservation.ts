@@ -29,6 +29,7 @@ export class ReservationPage {
     phone:''
   };
  
+  
   disable = true;
   value = this.navParams.get('param1');
 
