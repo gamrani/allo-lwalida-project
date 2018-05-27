@@ -8,6 +8,7 @@ import { CallNumber } from '@ionic-native/call-number';
 })
 export class HomePage {
   callNumber: CallNumber;
+  imgUrl = "assets/imgs/Allo.png";
   constructor(public navCtrl: NavController) {
 
   }
